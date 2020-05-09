@@ -2,10 +2,13 @@
   ESP8266 WebSocket Server
 
   YouTube:  Rodney McKay
-  https://www.youtube.com/channel/UCM1yyVNy0Wa4gOv0U6Ju6aw
+  https://www.youtube.com/watch?v=6utten8jP9E
   
   Github:   Portia-Lin
-  https://github.com/Portia-Lin/esp8266-relay
+  https://github.com/Portia-Lin/websocketsServer
+
+  ArduinoWebSockets library:
+  https://github.com/Links2004/arduinoWebSockets
 */
 
 #include <ESP8266WiFi.h>
