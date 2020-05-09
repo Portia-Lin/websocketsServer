@@ -14,8 +14,8 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 #include <WebSocketsServer.h> // Подключить библиотеку для работы с вэбсокет сервером
-const char* ssid = "RAZA";  // Имя сети WiFi
-const char* password = "nameofdoctor"; // Пароль от сети WiFi
+const char* ssid = "SSID";  // Имя сети WiFi
+const char* password = "PASSWORD"; // Пароль от сети WiFi
 
 // Переменная с содержанием вэб страницы:
 String web = "<!DOCTYPE html><html><head><title>Websocket</title><meta name='viewport' content='width=device-width, initial-scale=1.0' /><meta charset='UTF-8'><style>body {background-color: #F7F9FD;text-align: center;}</style></head><body><h1>Received message: <span id='message'>-</span></h1><button type='button' id='btnA'><h1>ON</h1></button><button type='button' id='btnB'><h1>OFF</h1></button></body><script>var Socket;document.getElementById('btnA').addEventListener('click', buttonApressed);document.getElementById('btnB').addEventListener('click', buttonBpressed);function init() {Socket = new WebSocket('ws://' + window.location.hostname + ':81/');Socket.onmessage = function(event) { processReceivedCommand(event); };}function processReceivedCommand(event) {document.getElementById('message').innerHTML = event.data;}function buttonApressed() {Socket.send('1');}function buttonBpressed() {Socket.send('0');}window.onload = function(event) {init();}</script></html>";
